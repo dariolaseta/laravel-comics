@@ -20,5 +20,7 @@ Route::get('/', function () {
     $dcLinks = config("db.dcLinks");
     $sitesLinks = config("db.sitesLinks");
 
-    return view('welcome', compact("headerLinks", "dcComics", "shopLinks", "dcLinks", "sitesLinks"));
+    $cardData = config("comics");
+
+    return view('welcome', compact("headerLinks", "dcComics", "shopLinks", "dcLinks", "sitesLinks", "cardData"));
 })->name('homepage');

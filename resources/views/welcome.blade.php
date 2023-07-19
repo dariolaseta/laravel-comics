@@ -11,10 +11,12 @@
     <div class="container">
         <button class="top-button">CURRENT SERIES</button>
 
+        @foreach($cardData as $data)
         <div class="card">
-            <img src="" alt="test">
-            <p>test</p>
+            <img src="{{$data["thumb"]}}" alt="comic thumbnail">
+            <p>{{$data["title"]}}</p>
         </div>
+        @endforeach
 
         <button class="load-more">LOAD MORE</button>
     </div>
