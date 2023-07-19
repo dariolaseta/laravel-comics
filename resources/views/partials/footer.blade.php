@@ -4,45 +4,23 @@
                 <div id="dc-comics">
                     <h2>DC COMICS</h2>
                     <ul>
+                        @foreach($dcComics as $link)
                         <li>
-                            <a href="#">placeholder</a>
+                            <a href="#">{{$link["text"]}}</a>
                         </li>
-                        <li>
-                            <a href="#">placeholder</a>
-                        </li>
-                        <li>
-                            <a href="#">placeholder</a>
-                        </li>
-                        <li>
-                            <a href="#">placeholder</a>
-                        </li>
-                        <li>
-                            <a href="#">placeholder</a>
-                        </li>
-                        <li>
-                            <a href="#">placeholder</a>
-                        </li>
+
+                        @endforeach
                     </ul>
                 </div>
     
                 <div id="shop">
                     <h2>SHOP</h2>
                     <ul>
+                        @foreach($shopLinks as $link)
                         <li>
-                            <a href="#">placeholder</a>
+                            <a href="#">{{$link["text"]}}</a>
                         </li>
-                        <li>
-                            <a href="#">placeholder</a>
-                        </li>
-                        <li>
-                            <a href="#">placeholder</a>
-                        </li>
-                        <li>
-                            <a href="#">placeholder</a>
-                        </li>
-                        <li>
-                            <a href="#">placeholder</a>
-                        </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -51,45 +29,22 @@
                 <div id="dc">
                     <h2>DC</h2>
                     <ul>
+                        @foreach($dcLinks as $link)
                         <li>
-                            <a href="#">placeholder</a>
+                            <a href="#">{{$link["text"]}}</a>
                         </li>
-                        <li>
-                            <a href="#">placeholder</a>
-                        </li>
-                        <li>
-                            <a href="#">placeholder</a>
-                        </li>
-                        <li>
-                            <a href="#">placeholder</a>
-                        </li>
-                        <li>
-                            <a href="#">placeholder</a>
-                        </li>
+                        @endforeach
                     </ul>
                 </div>
     
                 <div id="sites">
                     <h2>SITES</h2>
                     <ul>
+                        @foreach($sitesLinks as $link)
                         <li>
-                            <a href="#">placeholder</a>
+                            <a href="#">{{$link["text"]}}</a>
                         </li>
-                        <li>
-                            <a href="#">placeholder</a>
-                        </li>
-                        <li>
-                            <a href="#">placeholder</a>
-                        </li>
-                        <li>
-                            <a href="#">placeholder</a>
-                        </li>
-                        <li>
-                            <a href="#">placeholder</a>
-                        </li>
-                        <li>
-                            <a href="#">placeholder</a>
-                        </li>
+                        @endforeach
                     </ul>
                 </div>
 

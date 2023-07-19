@@ -6,12 +6,11 @@
 
         <nav>
             <ul>
+                @foreach( $headerLinks as $link)
                 <li>
-                    <a href="#">Home</a>
-                    <a href="#">Home</a>
-                    <a href="#">Home</a>
-                    <a href="#">Home</a>
+                    <a href="#">{{ $link['text'] }}</a>
                 </li>
+                @endforeach
             </ul>
         </nav>
     </div>
