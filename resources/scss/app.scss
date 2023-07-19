@@ -1,1 +1,216 @@
-@import "~bootstrap/scss/bootstrap";
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1170px;
+    width: 70%;
+    margin: 0 auto;
+    height: 200px;
+}
+
+h1,
+h2{
+    color: white;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+header{
+    div.container{
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem auto;
+        height: 100%;
+    }
+
+    div.logo{
+        img{
+            width: 80%;
+        }
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        font-size: .8rem;
+
+        ul{
+            display: flex;
+            
+            li{
+                padding-left: 2rem;
+            }
+
+            li.active a{
+                color: $blue;
+                border-bottom: 5px solid $blue;
+                padding-bottom: 3rem;
+            }
+        }
+
+        a{
+            color: black;
+        }
+    }
+}
+
+main{
+        background-color: $black;
+        div.container{
+            @include flex();
+            flex-wrap: wrap;
+            position: relative;
+
+            height: 100%;
+    
+            h1{
+                width: 100%;
+            }
+
+            button{
+                padding: 1rem 3rem;
+                background-color: $blue;
+                border: none;
+                font-size: 1rem;
+                color: white;
+            }
+            button.top-button{
+                position: absolute;
+                top: -1.5rem;
+                left: -2rem;
+            }
+            
+            button.load-more{
+                padding: .5rem 4rem;
+                margin: 2rem 0 1.4rem;
+                cursor: pointer;
+            }
+        }
+
+        div.card{
+            width: calc(100% / 6);
+            height: calc(100% / 6);
+        img{
+            width: 165px;
+            height: 165px;
+            margin-top: 3rem;
+            object-fit: cover;
+            object-position: 0 .3rem;
+        }
+
+        p{
+            color: white;
+            margin-top: 1rem;
+        }
+    }
+
+    div.jumbo{
+        height: 450px;
+
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: 0 2rem;
+        }
+    }
+}
+
+footer{
+    background-image: url("../assets/img/footer-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    nav.container{
+        display: flex;
+        padding: 2rem 0;
+        height: 100%;
+
+        ul{
+            padding: 1rem 0;
+
+            li{
+                a{
+                    color: #6e7069;
+                }
+                padding: .2rem 0;
+            }
+        }
+
+        div.first-block{
+            padding-right: 3rem;
+
+            div#shop{
+                padding-bottom: 1rem;
+            }
+        }
+
+        div.second-block{
+            display: flex;
+            
+            div#dc{
+                padding-right: 3rem;
+            }
+        }
+
+        div.logo{
+            img{
+                position: relative;
+                top: -60px;
+                left: 300px;
+            }
+        }
+    }
+
+    div.bottom-footer{
+        background-color: #303030;
+
+        div.container{
+
+            @include flex(row, space-between, center);
+
+            button{
+                background: none;
+                border: 2px solid $blue;
+                padding: 1rem 1.5rem;
+                color: white;
+                font-size: 1rem;
+                cursor: pointer;
+            }
+
+            div.socials{
+                ul{
+                    display: flex;
+                    align-items: center;
+
+                    li{
+                        padding-left: 1rem;
+                    }
+                }
+
+                a{
+                    color: $blue;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    div.bottom-bar{
+        height: 50px;
+        background-color: $black;
+    }
+}
